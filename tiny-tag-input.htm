@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" charset="utf-8">
+<title>Tiny Tag Input</title>
+<h1>Tiny Tag Input</h1>
+
+<h2>Programming Languages Survey</h2>
+<form>
+    <fieldset>
+        <label>Love:</label>
+        <input class="x-tag" name="l" list="proglangs">
+        <label>Hate:</label>
+        <input class="x-tag" name="h" value="Cobol, FORTRAN" list="proglangs">
+    </fieldset>
+    <button>Check submitted form values</button>
+</form>
+
+<datalist id="proglangs">
+    <option value="ActionScript"/>
+    <option value="Ada"/>
+    <option value="Basic"/>
+    <option value="C"/>
+    <option value="C#"/>
+    <option value="C++"/>
+    <option value="Cobol"/>
+    <option value="D"/>
+    <option value="Eiffel"/>
+    <option value="Erlang"/>
+    <option value="Forth"/>
+    <option value="FORTRAN"/>
+    <option value="Go"/>
+    <option value="Haskell"/>
+    <option value="Java"/>
+    <option value="JavaScript"/>
+    <option value="Lisp"/>
+    <option value="ML"/>
+    <option value="Objective C"/>
+    <option value="PHP"/>
+    <option value="Python"/>
+    <option value="Pascal"/>
+    <option value="Perl"/>
+    <option value="Ruby"/>
+    <option value="Python"/>
+    <option value="R"/>
+    <option value="Rust"/>
+    <option value="Scala"/>
+    <option value="Scheme"/>
+    <option value="Smalltalk"/>
+    <option value="SQL"/>
+    <option value="Swift"/>
+    <option value="Tcl"/>
+    <option value="Typescript"/>
+</datalist>
+
+<script src="tiny-tag-input.js"></script>
+<script>makeTagInputs('x-tag')</script>
+
+<style>
+/* required tag input styling */
+div.x-tag { display: inline-flex; flex-wrap: wrap }
+input.x-tag  { width: 3em; flex-grow: 1 }
+
+/* other demo page styles */
+html { margin: 0; padding: 0 }
+body { margin: 1em; padding: 0 }
+* { font-size: 20px; font-family: sans-serif }
+h1 { font-size: 30px }
+form {
+	margin: 1em 0 0;
+	width: 30em;
+}
+fieldset {
+    margin: 1em 0;
+    border: 0;
+    padding: 0;
+	display: grid;
+	grid-template-columns: min-content 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 20px
+}
+fieldset > label { padding: 5px 0; white-space: nowrap; grid-column: 1 }
+fieldset > div { grid-column: 2 }
+button.x-tag { margin-right: 5px }
+</style>
